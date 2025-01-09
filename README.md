@@ -57,7 +57,7 @@ Ensure you have the YOLO model weights file (`yolo11n-pose.pt`) in your project 
 
 1. **Run the script**:
 Execute the Python script to start detecting hands in real-time:
-python hand_detection.py
+```python hand_detection.py```
 
 2. **Interact with the application**:
 - The application will display a video feed from your webcam.
@@ -70,32 +70,27 @@ The main components of the code include:
 
 ### Loading the Model
 
-from ultralytics import YOLO
-model = YOLO("yolo11n-pose.pt")
-
+```from ultralytics import YOLO```
+```model = YOLO("yolo11n-pose.pt")```
 
 ### Keypoint Extraction
 
 The `extract_keypoints` function extracts specific keypoints from the detected results:
 
 def extract_keypoints(keypoints):
-# Implementation...
-
 
 ### Hand Raise Detection Logic
 
 The `are_hands_raised` function checks if either wrist is above its corresponding elbow:
 
-def are_hands_raised(keypoints_dict):
-# Implementation...
-
+```def are_hands_raised(keypoints_dict):```
 
 ### Video Processing Loop
 
 The main loop captures video frames and processes them for hand detection:
 
-cap = cv2.VideoCapture(0)
-while True:
+```cap = cv2.VideoCapture(0)```
+```while True:```
 
 # Frame processing...
 
